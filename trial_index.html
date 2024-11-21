@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<body>
+<div class="login">
+    <h1>Hello World</h1> <!-- Add this line for testing -->
+    <h1>Fraud Detection Form</h1>
+    <form action="/predict" method="POST">
+        Estimated Loss: <input type="number" name="Estimated_Loss"><br>
+        Incident Type: <input type="number" name="Incident_Type Type"><br>
+        Route: <input type="number" name="Route"><br>
+        Cargo Type: <input type="number" name="Cargo_Type"><br>
+        Cargo Value: <input type="number" name="Cargo_Value"><br>
+        KRA Lock: <input type="number" name="KRA_Lock"><br>
+        KRA Penalty: <input type="number" name="KRA_Penalty"><br>
+        prediction_text: <input type="number" name="prediction_text"><br>
+         
+
+        <input type="submit" value="Predict Fraud">
+    </form>
+    
+    <!-- Prediction result -->
+    {% if prediction_text %}
+    <div class="notification is-info mt-4">
+        <strong>{{ prediction_text }}</strong>
+    </div>
+    {% endif %}
+</div>    
+     
+</body>
+</html>
+
+
+
+ 
